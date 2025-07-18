@@ -1,0 +1,22 @@
+Copy code
+#buttonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a05a453b;
+}
+
+button{
+  background-color: blue;
+}

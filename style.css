@@ -1,0 +1,284 @@
+/* Import Google Fonts - Using a more modern approach with display=swap */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@400;500;800&display=swap');
+
+/* CSS Variables for a consistent color palette */
+:root {
+    --primary-color: #007bff; /* Bootstrap's primary blue */
+    --secondary-color: #6c757d; /* Bootstrap's secondary grey */
+    --success-color: #28a745; /* Green for positive actions */
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --dark-color: #343a40; /* Dark grey for nav/footer */
+    --light-color: #f8f9fa; /* Light grey for backgrounds */
+    --accent-color: rgb(104, 170, 148); /* Your existing green shade */
+    --quote-bg-color: antiquewhite; /* Your existing quote background */
+    --text-dark: #212529; /* Standard dark text */
+    --text-light: #f8f9fa; /* Standard light text */
+    --font-heading: 'Raleway', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+/* Navbar specific styles */
+.navbar {
+    background-color: var(--dark-color) !important; /* Ensure dark background */
+}
+
+.navbar-brand .logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand .logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light) !important;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-color) !important; /* Highlight active/hover links */
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    background-color: var(--dark-color);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    color: var(--text-light);
+    background-color: var(--dark-color);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: var(--quote-bg-color);
+    border: 5px solid var(--dark-color);
+    border-radius: 10px;
+    padding: 3rem !important; /* More padding for larger screens */
+    max-width: 900px; /* Limit width for better readability */
+    margin-left: auto; /* Center the div */
+    margin-right: auto; /* Center the div */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+}
+
+.quote-section h2 {
+    font-size: 1.8rem; /* Responsive font size */
+}
+
+@media (min-width: 768px) {
+    .quote-section h2 {
+        font-size: 2.5rem; /* Larger font on desktops */
+    }
+}
+
+/* Section Headings */
+.section-heading {
+    border: 4px solid var(--dark-color);
+    background-color: var(--accent-color);
+    color: var(--text-light); /* Ensure text is visible on accent background */
+    padding: 1rem 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Card Section Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures content within card stays within bounds */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+    height: 180px; /* Consistent height for all card images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+.card .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on button hover */
+}
+
+/* Footer Styles (basic integration here, detailed in footer.css) */
+footer {
+    background-color: var(--dark-color) !important;
+    color: var(--text-light);
+    font-family: var(--font-body);
+}
+
+footer .logo-details .fab {
+    color: var(--accent-color); /* Color for the Slack icon */
+}
+
+footer .social-icon {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+footer .social-icon:hover {
+    color: var(--accent-color) !important;
+    transform: scale(1.2);
+}
+
+footer h6 {
+    color: var(--accent-color); /* Headings in footer */
+}
+
+footer ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--accent-color);
+}
+
+footer .border-top {
+    border-color: rgba(255, 255, 255, 0.1) !important; /* Lighter border for contrast */
+}
+
+/* General calculator/form container styling */
+.calculator-container, .form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-container label, .form-container label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.calculator-container input[type="number"],
+.calculator-container select,
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    font-family: var(--font-body);
+}
+
+.calculator-container button, .form-container button {
+    background-color: var(--success-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-container button:hover, .form-container button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.result-section {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.result-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.result-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.text-content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-content-section h1, .text-content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.text-content-section p {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.text-content-section ol li {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}

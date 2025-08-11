@@ -1,0 +1,47 @@
+/* No direct @import here, as it's included in style.css */
+
+/* Base footer styling - mostly handled by Bootstrap classes in HTML and variables in style.css */
+/* This file will contain more specific overrides or unique effects for footer elements */
+
+
+
+/* Specific styling for social media icons */
+/* These effects are also detailed in style.css for consistency but kept here for specific overrides if needed */
+footer .media-icons a {
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: var(--text-light); /* Using CSS variable */
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+/* Specific background colors for each social icon */
+footer .media-icons a:nth-child(1) {
+    background: #4267B2; /* Facebook */
+}
+footer .media-icons a:nth-child(2) {
+    background: #1DA1F2; /* Twitter */
+}
+footer .media-icons a:nth-child(3) {
+    background: #E1306C; /* Instagram */
+}
+footer .media-icons a:nth-child(4) {
+    background: #0077B5; /* LinkedIn */
+}
+/* Removed YouTube icon as it's not present in the HTML anymore, but can be added if needed */
+
+/* Hover effects for social icons, using variables */
+footer .media-icons a:hover {
+    color: var(--dark-color); /* Text dark on hover */
+    background: var(--text-light); /* Light background on hover */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+
+
+/* No specific media queries needed here as Bootstrap handles responsiveness for layout */
